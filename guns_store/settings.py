@@ -66,7 +66,7 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Guns Store',
-    'DESCRIPTION': 'API de um ecommerce de armas de fogo.',
+    'DESCRIPTION': 'API de um eCommerce de armas de fogo.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
