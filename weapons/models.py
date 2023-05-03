@@ -9,7 +9,7 @@ class Weapon(models.Model):
     name = models.CharField(max_length=100)
     tipe = models.CharField(max_length=20)
     price = models.IntegerField()
-    descripition = models.TextField(max_length=600)
+    descripition = models.TextField(max_length=1000)
     image = models.CharField(max_length=200)
     image2 = models.CharField(max_length=200)
     image3 =models.CharField(max_length=200,blank=True)
