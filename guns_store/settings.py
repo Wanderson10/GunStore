@@ -49,6 +49,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "drf_spectacular",
+    'corsheaders',
 ]
 
 MY_APPS = [
@@ -74,6 +75,7 @@ SPECTACULAR_SETTINGS = {
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -81,6 +83,12 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CORS_ALLOWED_ORIGINS = [
+	'http://localhost:3000'
+]
+
+CORS_ALLOW_ALL_ORIGINS=True
 
 ROOT_URLCONF = "guns_store.urls"
 
@@ -173,8 +181,8 @@ if not DEBUG:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 SIMPLE_JWT ={
-    "ACCESS_TOKEN_LIFETIME" : timedelta(minutes=15),
-    "REFRESH_TOKEN" : timedelta(minutes=15)
+    "ACCESS_TOKEN_LIFETIME" : timedelta(minutes=24),
+    "REFRESH_TOKEN" : timedelta(minutes=24)
 }
 
 
