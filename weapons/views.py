@@ -23,3 +23,49 @@ class weaponDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Weapon.objects.all()
 
     lookup_url_kwarg = 'weapon_id'
+
+class viewWeaponPistol(generics.ListAPIView):
+      serializer_class = WeaponSerializer
+  
+      queryset = Weapon.objects.all()
+
+      def get_queryset(self):
+           return Weapon.objects.filter(
+                tipe = "Pistol"
+           )
+class viewWeaponBow(generics.ListAPIView):
+      serializer_class = WeaponSerializer
+  
+      queryset = Weapon.objects.all()
+
+      def get_queryset(self):
+           return Weapon.objects.filter(
+                tipe = "Bow"
+           )
+class viewWeaponCrossbow(generics.ListAPIView):
+      serializer_class = WeaponSerializer
+  
+      queryset = Weapon.objects.all()
+
+      def get_queryset(self):
+           return Weapon.objects.filter(
+                tipe = "Crossbow"
+           )
+class vieWeaponKnife(generics.ListAPIView):
+      serializer_class = WeaponSerializer
+  
+      queryset = Weapon.objects.all()
+
+      def get_queryset(self):
+           return Weapon.objects.filter(
+                tipe = "Knife"
+           )
+class vieWeaponRevolver(generics.ListAPIView):
+      serializer_class = WeaponSerializer
+  
+      queryset = Weapon.objects.all()
+
+      def get_queryset(self):
+           return Weapon.objects.filter(
+                tipe = "Revolver"
+           )

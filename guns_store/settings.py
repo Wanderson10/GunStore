@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gunstorebackend-production.up.railway.app','0.0.0.0']
+ALLOWED_HOSTS = ['gunstorebackend-production.up.railway.app','0.0.0.0','localhost']
 
 
 # Application definition
@@ -49,7 +49,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "drf_spectacular",
-    'corsheaders',
+     'corsheaders',
 ]
 
 MY_APPS = [
@@ -75,7 +75,7 @@ SPECTACULAR_SETTINGS = {
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
+     'corsheaders.middleware.CorsMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -85,8 +85,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-	'http://localhost:3000'
-]
+ 	'http://localhost:8000'
+ ]
 
 CORS_ALLOW_ALL_ORIGINS=True
 
