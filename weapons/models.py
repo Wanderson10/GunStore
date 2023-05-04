@@ -1,6 +1,6 @@
 from django.db import models
 class GroupWeapons(models.TextChoices):
-    GUNS = 'Guns'
+    Pistol = 'Pistol'
     KNIFE = 'Knife'
     BOW = 'Bow'
     CROSSBOW = 'CrossBow'
