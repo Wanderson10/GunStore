@@ -49,7 +49,7 @@ class viewWeaponCrossbow(generics.ListAPIView):
 
       def get_queryset(self):
            return Weapon.objects.filter(
-                tipe = "Crossbow"
+                tipe = "CrossBow"
            )
 class vieWeaponKnife(generics.ListAPIView):
       serializer_class = WeaponSerializer

@@ -16,6 +16,9 @@ class Weapon(models.Model):
     image = models.CharField(max_length=200)
     image2 = models.CharField(max_length=200)
     image3 =models.CharField(max_length=200,blank=True)
+    imageG=models.CharField(max_length=200,blank=True)
+    imageG2=models.CharField(max_length=200,blank=True)
+    
     atributes = models.ForeignKey(
         "atributes.Atributes",
         on_delete=models.CASCADE,
