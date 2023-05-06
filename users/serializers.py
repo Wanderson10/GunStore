@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
    
     class Meta:
         model = User
-        fields = ["id","username","email","date_joined","phone_number","cpf","is_employee","password","is_superuser"]
+        fields = ["id","username","email","date_joined","phone_number","cpf","password","is_superuser"]
         extra_kwargs ={'password' : {'write_only':True}}
     def get_user_comments(self, obj:User):
         return obj.user.Comments
