@@ -7,6 +7,7 @@ class LoginView(generics.CreateAPIView):
     ...
 
 class UserView(generics.ListCreateAPIView):
+    
     serializer_class = UserSerializer
   
     queryset = User.objects.all()
