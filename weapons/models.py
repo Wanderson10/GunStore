@@ -11,14 +11,14 @@ class Weapon(models.Model):
     tipe = models.CharField(  max_length=10,
         choices = GroupWeapons.choices,
         default= GroupWeapons.UNINFORMED)
-    price = models.IntegerField()
+    price = models.DecimalField(max_digits=12, decimal_places=2)
     descripition = models.TextField(max_length=1000)
     image = models.CharField(max_length=200)
     image2 = models.CharField(max_length=200)
     image3 =models.CharField(max_length=200,blank=True)
-    # imageG=models.CharField(max_length=200,blank=True)
-    # imageG2=models.CharField(max_length=200,blank=True)
     
+
+  
     atributes = models.ForeignKey(
         "atributes.Atributes",
         on_delete=models.CASCADE,

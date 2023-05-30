@@ -16,7 +16,8 @@ class CommentView(generics.ListCreateAPIView):
      queryset = Comment.objects.all()
     
      def perform_create(self, serializer):
-        serializer.save(  user_comments = self.request.user)
+      
+        serializer.save(  user_comments = self.request.user, )
         
 class CommentDetailView(generics.RetrieveUpdateDestroyAPIView):
     authentication_classes=[JWTAuthentication]
@@ -26,3 +27,4 @@ class CommentDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     
     lookup_url_kwarg = 'comment_id'
+
