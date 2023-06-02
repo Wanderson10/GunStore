@@ -11,7 +11,7 @@ class Weapon(models.Model):
     tipe = models.CharField(  max_length=10,
         choices = GroupWeapons.choices,
         default= GroupWeapons.UNINFORMED)
-    price = models.DecimalField(max_digits=12, decimal_places=2)
+    price = models.IntegerField()
     descripition = models.TextField(max_length=1000)
     image = models.CharField(max_length=200)
     image2 = models.CharField(max_length=200)
